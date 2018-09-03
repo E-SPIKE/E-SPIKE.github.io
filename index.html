@@ -12,18 +12,20 @@
       <br>
       <button onclick="myFunction()">What's your name?</button>
       <p id="name"></p>
+      <script>
+        function myFunction() {
+          var person = prompt("Please enter your name", "Your Name Here");
+          if (person != null) {
+              document.getElementById("name").innerHTML =
+              "Hello " + person + "! How are you today?"; } }
+      </script>
       <br>
       <br>
       <button onclick="randomNumber">CLICK HERE!</button>
       <p id="random"></p>
       <script>
-      function myFunction() {
-          var person = prompt("Please enter your name", "Your Name Here");
-          if (person != null) {
-              document.getElementById("name").innerHTML =
-              "Hello " + person + "! How are you today?"; } }
-      function randomNumber {
-        document.getElementById("random").innerHTML = Math.random();  }
+        function randomNumber {
+          document.getElementById("random").innerHTML = Math.random();  }
       </script>
     </div>
   </body>
