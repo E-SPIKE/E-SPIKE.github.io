@@ -26,7 +26,7 @@
           var number = Math.random() * 100;
           if (number != null) {
             document.getElementById("random").innerHTML =
-            "Your number is" + number + "";  } }
+            "Your number is " + number + "";  } }
       </script>
       <br><br>
       <form id="searchfrm" action="noresults.html">
@@ -35,7 +35,8 @@
       </form>
       <script>
         function searchFunction() {
-          document.getElementById("searchfrm").innerHTML();  }
+          document.getElementById("searchfrm").innerHTML =
+          "hello " + searchfrm + "";  }
       </script>
       <p id="searchfrm"></p>
     </div>
