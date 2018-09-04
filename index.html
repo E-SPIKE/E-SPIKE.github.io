@@ -25,7 +25,10 @@
       <p id="random"></p>
       <script>
         function randomNumber {
-          document.getElementById("random").innerHTML = 5 + 6;  }
+          var number = Math.random();
+          if (number != null) {
+            document.getElementById("random").innerHTML =
+            "5 + 6";  } }
       </script>
     </div>
   </body>
