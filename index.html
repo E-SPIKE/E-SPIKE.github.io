@@ -29,10 +29,14 @@
             "Your number is" + number + "";  } }
       </script>
       <br><br>
-      <form>
+      <form id="searchfrm" action="/action_page.php">
         <input type="text" placeholder="Search..." name="search">
         <input type="button" onclick="searchFunction" value="GO">
       </form>
+      <script>
+        function searchFunction() {
+          document.getElementById("searchfrm").submit();  } 
+      </script>
     </div>
   </body>
   <footer>
