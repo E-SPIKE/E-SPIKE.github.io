@@ -29,13 +29,17 @@
             "Your number is " + number + "";  } }
       </script>
       <br><br>
-      <input id="search" type="text" placeholder="Search...">
+      <form id="searchform">
+        <input id="search" type="text" placeholder="Search...">
+        <input type="button" onclick="searchFunction()" value="Submit">
+      </form>
       <p id="searched"></p>
       <script>
-        var input = document.getElementById("search");
+      function searchFunction() {
+        var input = document.getElementById("searchform").submit;
         if (input != null)  {
           document.getElementById("searched").innerHTML =
-          "hello " + input + "";  }
+          "hello " + input + "";  } }
       </script>
     </div>
   </body>
