@@ -6,41 +6,48 @@
   </head>
   <body>
     <div class="title-page">
-      <h1>The Learning Space</h1>
-      <h3>This is the Github repo that I use for learning and progressing my HTML skills</h3>
+      <div class="title">
+        <h1>The Learning Space</h1>
+        <h3>This is the Github repo that I use for learning and progressing my HTML skills</h3>
+      </div>
       <br><br>
-      <button onclick="myFunction()">What's your name?</button>
-      <p id="name"></p>
-      <script>
-        function myFunction() {
-          var person = prompt("Please enter your name", "Your Name Here");
-          if (person != null) {
+      <div class="functions">
+        <button onclick="myFunction()">What's your name?</button>
+        <p id="name"></p>
+        <br><br>
+        <button onclick="randomNumber()">CLICK HERE!</button>
+        <p id="random"></p>
+        <br><br>
+        <div class="form1">
+          <form id="searchform">
+            <input id="search" type="text" placeholder="Your Name Here">
+            <br>
+            <div class="submit">
+              <input type="button" onclick="searchFunction()" value="Submit">
+            </div>
+          </form>
+        </div>
+        <p id="searched"></p>
+      </div>
+      <div class="scripts">
+        <script>
+          function searchFunction() {
+            var input = document.getElementById("search").value;
+            if (input != null)  {
+              document.getElementById("searched").innerHTML =
+              "Hello " + input + " how are you?";  } }
+          function randomNumber() {
+            var number = Math.random() * 100;
+            if (number != null) {
+              document.getElementById("random").innerHTML =
+              "Your number is " + number + "";  } }
+          function myFunction() {
+            var person = prompt("Please enter your name", "Your Name Here");
+            if (person != null) {
               document.getElementById("name").innerHTML =
-              "Hello yeet " + person + "! How are you today?"; } }
+              "Hello" + person + "! How are you today?"; } }
       </script>
-      <br><br>
-      <button onclick="randomNumber()">CLICK HERE!</button>
-      <p id="random"></p>
-      <script>
-        function randomNumber() {
-          var number = Math.random() * 100;
-          if (number != null) {
-            document.getElementById("random").innerHTML =
-            "Your number is " + number + "";  } }
-      </script>
-      <br><br>
-      <form id="searchform">
-        <input id="search" type="text" placeholder="Your Name Here">
-        <input type="button" onclick="searchFunction()" value="Submit">
-      </form>
-      <p id="searched"></p>
-      <script>
-      function searchFunction() {
-        var input = document.getElementById("search").value;
-        if (input != null)  {
-          document.getElementById("searched").innerHTML =
-          "Hello " + input + " how are you?";  } }
-      </script>
+    </div>
     </div>
   </body>
   <footer>
