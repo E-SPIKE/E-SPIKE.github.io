@@ -36,7 +36,7 @@
       <p id="searched"></p>
       <script>
       function searchFunction() {
-        var input = document.getElementById("search").submit();
+        var input = document.getElementById("search").value;
         if (input != null)  {
           document.getElementById("searched").innerHTML =
           "hello " + input + "";  } }
