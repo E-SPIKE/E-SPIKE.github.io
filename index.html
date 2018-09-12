@@ -55,8 +55,41 @@
             if (place == "NSW") {
               window.open("https://e-spike.github.io/NSW");  }
             else {
-              window.open("https://e-spike.github.io/noresults");  }
+              window.open("https://e-spike.github.io/noresults");  }  }
+      </script>
+      <br><br><br><br>
+      <h2>My Phonebook</h2>
+
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+      <ul id="myUL">
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+
+        <li><a href="#">Three</a></li>
+        <li><a href="#">Four</a></li>
+
+        <li><a href="#">Five</a></li>
+        <li><a href="#">Six</a></li>
+        <li><a href="#">Seven</a></li>
+      </ul>
+
+      <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
           }
+        }
       </script>
     </div>
     </div>
