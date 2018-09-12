@@ -38,6 +38,15 @@ button {
   box-sizing: border-box;
 }
 
+.finder {
+  border-radius: 25px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 350px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
 #submit {
   width: 306px;
 }
@@ -45,4 +54,13 @@ button {
 #search {
   width: 300px;
   height: 30px;
+}
+
+#searchPlace {
+  width: 300px;
+  height: 30px;
+}
+
+#searchPlaces {
+  width: 300px;
 }
