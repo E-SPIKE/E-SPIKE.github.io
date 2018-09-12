@@ -10,7 +10,7 @@
         <h1>The Learning Space</h1>
         <h3>This is the Github repo that I use for learning and progressing my HTML skills</h3>
       </div>
-      <br><br>
+      <br><br><br><br>
       <div class="functions">
         <button onclick="myFunction()">What's your name?</button>
         <p id="name"></p>
@@ -19,13 +19,17 @@
         <p id="random"></p>
         <br><br>
         <div class="form1">
-          <form id="searchform">
-            <input id="search" type="text" placeholder="Your Name Here">
-            <br>
-            <input id="submit" type="button" onclick="searchFunction()" value="Submit" style="height:300px;">
-          </form>
+          <input id="search" type="text" placeholder="Your Name Here">
+          <br>
+          <button id="submit" onclick="searchFunction()">Submit!</button>
         </div>
         <p id="searched"></p>
+        <br><br>
+        <div class="finder">
+          <input id="searchPlace" type="text" placeholder="Search...">
+          <br>
+          <button id="searchPlaces" onclick="searchPlaceFunction()">Search...</button>
+        </div>
       </div>
       <div class="scripts">
         <script>
@@ -33,7 +37,7 @@
             var input = document.getElementById("search").value;
             if (input != null)  {
               document.getElementById("searched").innerHTML =
-              "Hello " + input + " how are you?";  } }
+              "Hello " + input + "! How are you?";  } }
           function randomNumber() {
             var number = Math.random() * 100;
             if (number != null) {
@@ -44,6 +48,12 @@
             if (person != null) {
               document.getElementById("name").innerHTML =
               "Hello " + person + "! How are you today?"; } }
+          function searchPlaceFunction() {
+            var place = document.getElementById("searchPlace").value;
+            if (place == "ACT") {
+              window.open("https://e-spike.github.io/noresults");
+            }
+          }
       </script>
     </div>
     </div>
