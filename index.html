@@ -22,9 +22,7 @@
           <form id="searchform">
             <input id="search" type="text" placeholder="Your Name Here">
             <br>
-            <div class="submit">
-              <input type="button" onclick="searchFunction()" value="Submit">
-            </div>
+            <input id="submit" type="button" onclick="searchFunction()" value="Submit">
           </form>
         </div>
         <p id="searched"></p>
@@ -45,7 +43,7 @@
             var person = prompt("Please enter your name", "Your Name Here");
             if (person != null) {
               document.getElementById("name").innerHTML =
-              "Hello" + person + "! How are you today?"; } }
+              "Hello " + person + "! How are you today?"; } }
       </script>
     </div>
     </div>

@@ -26,16 +26,24 @@ h3 {
 button {
   font-size: 30px;
   color: black;
-  background-color: #66FF00;
+  background-color: #f2f2f2;
 }
 
 .form1 {
-  border-radius: 50px;
+  border-radius: 25px;
   background-color: #f2f2f2;
-  padding: 10px;
-
+  padding: 20px;
+  width: 350px;
+  border: 1px solid black;
+  box-sizing: border-box;
 }
 
-.submit {
+#submit {
+  width: 306px;
+  height: 30px;
+}
 
+#search {
+  width: 300px;
+  height: 30px;
 }
