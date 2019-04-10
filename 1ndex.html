@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <title>The Learning Space</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="title-page">
+      <div class="title">
+        <h1>The Learning Space</h1>
+        <h3>This is the Github repo that I use for learning and progressing my HTML skills</h3>
+      </div>
+      <br><br><br><br>
+      <div class="functions">
+        <button onclick="myFunction()">What's your name?</button>
+        <p id="name"></p>
+        <br><br>
+        <button onclick="randomNumber()">Random Number!</button>
+        <p id="random"></p>
+        <br><br>
+        <div class="form1">
+          <input id="search" type="text" placeholder="Your Name Here">
+          <br>
+          <button id="submit" onclick="searchFunction()">Submit!</button>
+        </div>
+        <p id="searched"></p>
+        <br><br>
+        <div class="finder">
+          <input id="searchPlace" type="text" placeholder="Search...">
+          <br>
+          <button id="searchPlaces" onclick="searchPlaceFunction()">Search...</button>
+        </div>
+      </div>
+      <div class="scripts">
+        <script>
+          function searchFunction() {
+            var input = document.getElementById("search").value;
+            if (input != null)  {
+              document.getElementById("searched").innerHTML =
+              "Hello " + input + "! How are you?";  } }
+          function randomNumber() {
+            var number = Math.random() * 100;
+            if (number != null) {
+              document.getElementById("random").innerHTML =
+              "Your number is " + number + "";  } }
+          function myFunction() {
+            var person = prompt("Please enter your name", "Your Name Here");
+            if (person != null) {
+              document.getElementById("name").innerHTML =
+              "Hello " + person + "! How are you today?"; } }
+          function searchPlaceFunction() {
+            var place = document.getElementById("searchPlace").value;
+            if (place == "ACT") {
+              window.open("https://e-spike.github.io/ACT"); }
+            if (place == "NSW") {
+              window.open("https://e-spike.github.io/NSW");  }
+            else {
+              window.open("https://e-spike.github.io/noresults");  }  }
+      </script>
+      <br><br><br><br>
+      <h2>My Phonebook</h2>
+
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+      <ul id="myUL">
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+
+        <li><a href="#">Three</a></li>
+        <li><a href="#">Four</a></li>
+
+        <li><a href="#">Five</a></li>
+        <li><a href="#">Six</a></li>
+        <li><a href="#">Seven</a></li>
+      </ul>
+
+      <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        }
+      </script>
+    </div>
+    <br><br><br><br>
+    <div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+    <br><br><br><br><br><br><br><br>
+    </div>
+    <br><br><br><br><br><br><br><br>
+  </body>
+  <footer>
+  </footer>
+</html>
